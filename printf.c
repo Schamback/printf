@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - prints a formatted string to stdout
  * @format: string that contains zero or more directives
