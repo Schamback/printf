@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
  * _printf - prints a formatted string to stdout
@@ -10,61 +9,61 @@
 int _printf(char *format, ...);
 {
 
-	  int i = 0, count = 0;
-    char c;
+	  int k = 0, counts = 0;
+    char y;
     char *s;
     va_list args;
 
     va_start(args, format);
 
-    while (format && format[i])
+    while (format && format[k])
     {
-        if (format[i] == '%')
+        if (format[k] == '%')
         {
-            i++;
-            switch (format[i])
+            k++;
+            switch (format[k])
             {
-                case 'c':
-                    c = (char) va_arg(args, int);
-                    count += _putchar(c);
+                case 'y':
+                    y = (char) va_arg(args, int);
+                    counts += _putchar(y);
                     break;
                 case 's':
                     s = va_arg(args, char *);
-                    count += _puts(s);
+                    counts += _puts(s);
                     break;
                 case '%':
-                    count += _putchar('%');
+                    counts += _putchar('%');
                     break;
                 default:
-                    count += _putchar('%');
-                    count += _putchar(format[i]);
+                    counts += _putchar('%');
+                    counts += _putchar(format[k]);
                     break;
             }
         }
         else
         {
-            count += _putchar(format[i]);
+            counts += _putchar(format[k]);
         }
 
-        i++;
+        k++;
     }
 
     va_end(args);
 
-    return count;
+    return counts;
 }
 
 {
   va_list args;
-  int sum = 0;
+  int sums = 0;
 
-  va_start(args, count);
-  for (int i = 0; i < count; i++) {
-    sum += va_arg(args, int);
+  va_start(args, counts);
+  for (int k = 0; k < counts; k++) {
+    sums += va_arg(args, int);
   }
   va_end(args);
 
-  return sum;
+  return sums;
 }
 
 /**
@@ -86,15 +85,13 @@ int _putchar(char c)
  */
 int _puts(char *str)
 {
-    int i = 0;
+    int u = 0;
 
-    while (str && str[i])
+    while (str && str[u])
     {
-        _putchar(str[i]);
-        i++;
+        _putchar(str[u]);
+        u++;
     }
 
-    return i;
+    return u;
 }
-
-
