@@ -65,13 +65,13 @@ unsigned int k;
 int sum = 0;
 
 va_start(args, n);
-for (k = 0;k < n; k++)
+for (k = 0; k < n; k++)
 {
 sum += va_arg(args, int);
 }
 va_end(args);
 
-return sum;
+return (sum);
 }
 
 /**
