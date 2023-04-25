@@ -6,7 +6,7 @@
  *
  * Return: the number of characters printed
  */
-int _printf(char *format, ...);
+int _printf(char *format, ...)
 {
 	int k = 0, counts = 0;
 
@@ -49,6 +49,13 @@ int _printf(char *format, ...);
 		return (counts);
 }
 
+/**
+ * sum_them_all - sums a variable number of integers
+ * @n: number of integers to sum
+ *
+ * Return: the sum of the integers
+ */
+int sum_them_all(const unsigned int n, ...)
 {
 	va_list args;
 
