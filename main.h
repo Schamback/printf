@@ -17,4 +17,5 @@ typedef struct printstruct
 }structype;
 
 int _printf(const char *format, ...);
+int (*driver(char *format))(char *format, va_list);
 #endif

@@ -7,7 +7,7 @@
  */
 int _printf(char *format, ...)
 {
-	int write = 0, (*type)(char *, va_list);
+	int write = 0, (*structype)(char *, va_list);
 	char k[3];
 	va_list ra;
 
@@ -20,12 +20,12 @@ int _printf(char *format, ...)
 	{
 		if (format[0] == '%')
 		{
-			type = driver(format);
-			if (type)
+			structype = driver(format);
+			if (structype)
 			{
 				k[0] = '%';
 				k[1] = format[1];
-				write += type(k, ra);
+				write += structype(k, ra);
 			}
 			else if (format[1] != '\0')
 			{

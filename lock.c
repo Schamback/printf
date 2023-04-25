@@ -2,8 +2,8 @@
 
 /**
  * driver - selector for type of input.
- * @format: string.
- * Description: the function loops through the structs
+ * @format: string
+ * Description: function loops through the structs
  * selector[] ment of the struct.
  * Return: a pointer
  * structype selector - Struct
@@ -30,7 +30,7 @@ return (NULL);
 for (a = 0; selector[a].k; a++)
 {
 if (format[1] == selector[a].k[1])
-return (selector[k].u);
+return (selector[a].u);
 }
 return (NULL);
 }
