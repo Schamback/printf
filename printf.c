@@ -58,18 +58,20 @@ return (counts);
  * @n: number of parameters passed to the function
  * Return: the sum of all its parameters
  */
-int sum_them_all(unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 va_list args;
-int counts = 0;
+unsigned int k;
+int sum = 0;
 
 va_start(args, n);
-for (unsigned int k = 0; k < n; k++)
+for (k = 0;k < n; k++)
 {
-counts += va_arg(args, int);
+sum += va_arg(args, int);
 }
 va_end(args);
-return (counts);
+
+return sum;
 }
 
 /**
