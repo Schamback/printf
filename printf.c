@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - prints a formatted string to stdout
  * @format: string that contains zero or more directives
@@ -48,13 +49,6 @@ int _printf(char *format, ...)
 		return (counts);
 }
 
-/**
- * sum_them_all - sums a variable number of integers
- * @n: number of integers to sum
- *
- * Return: the sum of the integers
- */
-int sum_them_all(const unsigned int n, ...)
 {
 	va_list args;
 
